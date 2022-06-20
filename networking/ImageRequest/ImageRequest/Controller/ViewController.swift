@@ -28,13 +28,27 @@ class ViewController: UIViewController {
             print("Could not create URL")
             return
         }
-        
+        /*
         let task = URLSession.shared.dataTask(with: imageUrl) {(data, response, error) in
             guard let data = data else {
                 print("There was no data")
                 return
             }
             let image = UIImage(data: data)
+            DispatchQueue.main.async {
+                self.imageView.image = image
+            }
+        }
+        task.resume()
+         */
+        let task = URLSession.shared.downloadTask(with: imageUrl) {(location, response, error) in
+            guard let location = location else {
+                print("Location is nil")
+                return
+            }
+            print(location)
+            let imageData = try! Data(contentsOf: location)
+            let image = UIImage(data: imageData)
             DispatchQueue.main.async {
                 self.imageView.image = image
             }

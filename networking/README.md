@@ -101,6 +101,6 @@ Error message: *App Transport Security has blocked a cleartext HTTP connection s
 
 Documents: https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW60
 
-NSExceptionAllowsInsecureHTTPLoads: When set to YES, allows you to make insecure connections (e.g to an HTTP server, or to an untrusted HTTPS server) for a domain whose security attributes you _do_ control.
+*NSExceptionAllowsInsecureHTTPLoads*: When set to YES, allows you to make insecure connections (e.g to an HTTP server, or to an untrusted HTTPS server) for a domain whose security attributes you ***do*** control.
 
-NSThirdPartyExceptionAllowsInsecureHTTPLoads: When set to YES, allows you to make insecure connections (e.g to an HTTP server, or to an untrusted HTTPS server) for a domain whose security attributes you don't control
+*NSThirdPartyExceptionAllowsInsecureHTTPLoads*: When set to YES, allows you to make insecure connections (e.g to an HTTP server, or to an untrusted HTTPS server) for a domain whose security attributes you don't control
