@@ -78,3 +78,20 @@ udacityAppURL.path = "/us/app/udacity/id819700933"
 udacityAppURL.queryItems = [URLQueryItem(name: "mt", value: "8")]
 print(udacityAppURL) // https://itunes.apple.com/us/app/udacity/id819700933?mt=8
 ```
+
+## URLSession and Data Tasks
+
+URLSession: An object that coordinates a group of related network data transfer tasks.
+
+"Tasks" are what URLSession calls network requests.
+
+* **URLSessionDataTask**: Used for perfuming an HTTP request (GET, POST, etc.). (stored in memory)
+* **URLSessionDownloadTask**: Downloading a file from a server.
+* **URLSessionUploadTask**: Uploading a file to a server
+* **URLSessionStreamTask**: Getting a continuous stream of data from a server.
+
+Documents:
+1. https://developer.apple.com/documentation/foundation/urlsessiondatatask
+2. https://developer.apple.com/documentation/foundation/urlsessiontask
+
+*After you create a task, you start it by calling its resume() method. The session then maintains a strong reference to the task until the request finishes or fails; you don’t need to maintain a reference to the task unless it’s useful for your app’s internal bookkeeping.*
