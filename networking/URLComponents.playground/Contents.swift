@@ -22,3 +22,38 @@ udacityAppURL.path = "/us/app/udacity/id819700933"
 udacityAppURL.queryItems = [URLQueryItem(name: "mt", value: "8")]
 print(udacityAppURL) // https://itunes.apple.com/us/app/udacity/id819700933?mt=8
 
+struct AppStore {
+    static let scheme = "https"
+    static let host = "itunes.apple.com"
+    static let udacityPath = "/us/app/udacity/id819700933"
+    
+    enum ParameterKey: String {
+        case mediaType = "mt"
+    }
+    
+    enum MediaType: String {
+        case music = "1",
+        podcasts = "2",
+        audiobooks = "3",
+        tvShows = "4",
+        musicVideos = "5",
+        movies = "6",
+        iPodGames = "7",
+        mobileApps = "8",
+        ringTones = "9",
+        iTunesU = "10",
+        ebooks = "11",
+        desktopApps = "12"
+    }
+    
+    static func getURL(path: String, parameterKey: ParameterKey, mediaType: MediaType) -> URL? {
+        var appURL = URLComponents()
+        appURL.scheme = AppStore.scheme
+        appURL.host = AppStore.host
+        appURL.path = path
+        appURL.queryItems = [URLQueryItem(name: parameterKey.rawValue, value: mediaType.rawValue)]
+        return appURL.url
+    }
+}
+
+print(AppStore.getURL(path: "/us/app/udacity/id819700933", parameterKey: .mediaType, mediaType: .mobileApps))
