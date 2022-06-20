@@ -67,3 +67,14 @@ simpleURL?.appendPathComponent("?mt=8")
 print("simpleURL: \(simpleURL!)" ) // https://itunes.apple.com/us/app/udacity/id819700933/%3Fmt=8
 
 ```
+
+## URL Components
+
+```swift
+var udacityAppURL = URLComponents()
+udacityAppURL.scheme = "https"
+udacityAppURL.host = "itunes.apple.com"
+udacityAppURL.path = "/us/app/udacity/id819700933"
+udacityAppURL.queryItems = [URLQueryItem(name: "mt", value: "8")]
+print(udacityAppURL) // https://itunes.apple.com/us/app/udacity/id819700933?mt=8
+```
