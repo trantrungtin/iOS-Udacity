@@ -95,3 +95,6 @@ Documents:
 2. https://developer.apple.com/documentation/foundation/urlsessiontask
 
 *After you create a task, you start it by calling its resume() method. The session then maintains a strong reference to the task until the request finishes or fails; you don’t need to maintain a reference to the task unless it’s useful for your app’s internal bookkeeping.*
+
+## App Transport Security
+Error message: App Transport Security has blocked a cleartext HTTP connection since it is insecure. Use HTTPS instead or add Exception Domains to your app's Info.plist.
