@@ -13,6 +13,10 @@
 		D7883DF6286182350096BD94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7883DF4286182350096BD94 /* Main.storyboard */; };
 		D7883DF8286182380096BD94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7883DF7286182380096BD94 /* Assets.xcassets */; };
 		D7883DFB286182380096BD94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7883DF9286182380096BD94 /* LaunchScreen.storyboard */; };
+		D7883E0D2861A4070096BD94 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7883E0C2861A4070096BD94 /* Colors.swift */; };
+		D7883E0F2861A41C0096BD94 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7883E0E2861A41C0096BD94 /* GradientView.swift */; };
+		D7883E112861AA590096BD94 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7883E102861AA590096BD94 /* LoginButton.swift */; };
+		D7883E132861AD330096BD94 /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7883E122861AD330096BD94 /* LoginTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		D7883DF7286182380096BD94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7883DFA286182380096BD94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7883DFC286182380096BD94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7883E0C2861A4070096BD94 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		D7883E0E2861A41C0096BD94 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		D7883E102861AA590096BD94 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
+		D7883E122861AD330096BD94 /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +95,10 @@
 		D7883E0B2861A3C50096BD94 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D7883E0C2861A4070096BD94 /* Colors.swift */,
+				D7883E0E2861A41C0096BD94 /* GradientView.swift */,
+				D7883E102861AA590096BD94 /* LoginButton.swift */,
+				D7883E122861AD330096BD94 /* LoginTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -163,8 +175,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7883DF3286182350096BD94 /* ViewController.swift in Sources */,
+				D7883E112861AA590096BD94 /* LoginButton.swift in Sources */,
+				D7883E0D2861A4070096BD94 /* Colors.swift in Sources */,
+				D7883E0F2861A41C0096BD94 /* GradientView.swift in Sources */,
 				D7883DEF286182350096BD94 /* AppDelegate.swift in Sources */,
 				D7883DF1286182350096BD94 /* SceneDelegate.swift in Sources */,
+				D7883E132861AD330096BD94 /* LoginTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
