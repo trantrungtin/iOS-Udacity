@@ -105,8 +105,18 @@ Documents: https://developer.apple.com/library/archive/documentation/General/Ref
 
 *NSThirdPartyExceptionAllowsInsecureHTTPLoads*: When set to YES, allows you to make insecure connections (e.g to an HTTP server, or to an untrusted HTTPS server) for a domain whose security attributes you don't control
 
-### JSON
+## JSON
 Javascript Object Notation: a data format often used to send data to and from web services.
+
+### JSON Values and Their Corresponding Swift Types
+| JSON Values                                   | Swift Type                             |
+|-----------------------------------------------|----------------------------------------|
+| Anything contained in braces, `{ ... }`           | struct (usually), class, or dictionary |
+| Anything contained in brackets `[ ... ]`          | `Array`                                |
+| Anything contained in quotes `" ... "`            | `String`                               |
+| Any whole number, e.g. `10`                     | `Int`                                   |
+| Anything with a decimal, e.g. `25.2`           | `Float` or `Double`                        |
+| A boolean (without quotes), `true` or `false` | `Bool`                                   |
 
 [JSONSerialization](https://developer.apple.com/documentation/foundation/jsonserialization): converts JSON data to and from Swift dictionaries
 ```swift
