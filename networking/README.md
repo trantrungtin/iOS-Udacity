@@ -104,3 +104,15 @@ Documents: https://developer.apple.com/library/archive/documentation/General/Ref
 *NSExceptionAllowsInsecureHTTPLoads*: When set to YES, allows you to make insecure connections (e.g to an HTTP server, or to an untrusted HTTPS server) for a domain whose security attributes you ***do*** control.
 
 *NSThirdPartyExceptionAllowsInsecureHTTPLoads*: When set to YES, allows you to make insecure connections (e.g to an HTTP server, or to an untrusted HTTPS server) for a domain whose security attributes you don't control
+
+### JSON
+Javascript Object Notation: a data format often used to send data to and from web services.
+
+[JSONSerialization](https://developer.apple.com/documentation/foundation/jsonserialization): converts JSON data to and from Swift dictionaries
+```swift
+let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+let url = json["message"] as! String
+```
+
+
+Codable: a protocol used to convert data, like JSON, to and from Swift types
