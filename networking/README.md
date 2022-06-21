@@ -128,3 +128,16 @@ let decoder = JSONDecoder()
 let imageData = try! decoder.decode(DogImage.self, from: data)
 let url = imageData.message
 ```
+
+## Escaping vs. Non-escaping
+```swift
+func dataTask(with url: URL, 
+completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
+    // ...
+}
+```
+To understand the meaning of @escaping you need to know two terms: *synchronous* and *asynchronous*.
+* A task is is synchronous if each line of code waits for the previous line of code to finish.
+* Something is asynchronous if two tasks run independently from one another. In other words, one task doesn't need the other task to finish in order to execute. Each function calls dataTask() which means each image is downloaded on its own thread. Even though the functions are called in order, the threads run independently of one another, and we can't guarantee when each dataTask is finished. 
+
+In general, if you need to do something asynchronous like making a network request, then you'll need to mark it with @escaping.
