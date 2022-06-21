@@ -141,3 +141,81 @@ To understand the meaning of @escaping you need to know two terms: *synchronous*
 * Something is asynchronous if two tasks run independently from one another. In other words, one task doesn't need the other task to finish in order to execute. Each function calls dataTask() which means each image is downloaded on its own thread. Even though the functions are called in order, the threads run independently of one another, and we can't guarantee when each dataTask is finished. 
 
 In general, if you need to do something asynchronous like making a network request, then you'll need to mark it with @escaping.
+
+## Coding Keys
+```swift
+var json = """
+{
+    "food_name": "Lemon",
+    "taste": "sour",
+    "number of calories": 17
+}
+""".data(using: .utf8)!
+
+struct Food: Codable {
+    let name: String
+    let taste: String
+    let calories: Int
+    
+    // add CodingKeys enum here
+    enum CodingKeys: String, CodingKey {
+        case name = "food_name"
+        case taste
+        case calories = "number of calories"   
+    }
+}
+```
+
+## JSON Arrays
+```swift
+var json = """
+[
+    {
+        "title": "Groundhog Day",
+        "released": 1993,
+        "starring": ["Bill Murray", "Andie MacDowell", "Chris Elliot"]
+    },
+    {
+        "title": "Home Alone",
+        "released": 1990,
+        "starring": ["Macaulay Culkin", "Joe Pesci", "Daniel Stern", "John Heard", "Catherine O'Hara"]
+    }
+]
+""".data(using: .utf8)!
+
+struct Movie: Codable {
+    let title: String
+    let released: Int
+    let starring: [String]
+}
+
+let decoder = JSONDecoder()
+var comedies: [Movie]
+
+comedies = try decoder.decode([Movie].self, from: json)
+```
+
+## Nested JSON
+```swift
+var json = """
+{
+    "name": "Neha",
+    "studentId": 326156,
+    "academics": {
+        "field": "iOS",
+        "grade": "A"
+    }
+}
+""".data(using: .utf8)!
+
+struct Academics: Codable {
+    let field: String
+    let grade: String
+}
+
+struct Student: Codable {
+    let name: String
+    let studentId: Int
+    let academics: Academics
+}
+```
