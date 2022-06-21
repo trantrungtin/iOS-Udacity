@@ -20,6 +20,8 @@
 		D7883E152861B4AC0096BD94 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7883E142861B4AC0096BD94 /* SearchViewController.swift */; };
 		D7883E172861B4B80096BD94 /* WatchlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7883E162861B4B80096BD94 /* WatchlistViewController.swift */; };
 		D7883E192861B4C50096BD94 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7883E182861B4C50096BD94 /* FavoritesViewController.swift */; };
+		D7883E1E2861BBA10096BD94 /* TMDBClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7883E1D2861BBA10096BD94 /* TMDBClient.swift */; };
+		D7883E212861BC600096BD94 /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D7883E202861BC600096BD94 /* Secrets.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		D7883E142861B4AC0096BD94 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		D7883E162861B4B80096BD94 /* WatchlistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistViewController.swift; sourceTree = "<group>"; };
 		D7883E182861B4C50096BD94 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		D7883E1D2861BBA10096BD94 /* TMDBClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBClient.swift; sourceTree = "<group>"; };
+		D7883E202861BC600096BD94 /* Secrets.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +75,10 @@
 			isa = PBXGroup;
 			children = (
 				D7883DFC286182380096BD94 /* Info.plist */,
+				D7883E202861BC600096BD94 /* Secrets.xcconfig */,
 				D7883DEE286182350096BD94 /* AppDelegate.swift */,
 				D7883DF0286182350096BD94 /* SceneDelegate.swift */,
+				D7883E1A2861BB290096BD94 /* Model */,
 				D7883E0B2861A3C50096BD94 /* View */,
 				D7883E0A2861A3BB0096BD94 /* Controller */,
 				D7883E092861A3AC0096BD94 /* Assets */,
@@ -110,6 +116,30 @@
 				D7883E122861AD330096BD94 /* LoginTextField.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		D7883E1A2861BB290096BD94 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D7883E1B2861BB360096BD94 /* Data */,
+				D7883E1C2861BB7C0096BD94 /* TMDB Client */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D7883E1B2861BB360096BD94 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D7883E1C2861BB7C0096BD94 /* TMDB Client */ = {
+			isa = PBXGroup;
+			children = (
+				D7883E1D2861BBA10096BD94 /* TMDBClient.swift */,
+			);
+			path = "TMDB Client";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +200,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7883E212861BC600096BD94 /* Secrets.xcconfig in Resources */,
 				D7883DFB286182380096BD94 /* LaunchScreen.storyboard in Resources */,
 				D7883DF8286182380096BD94 /* Assets.xcassets in Resources */,
 				D7883DF6286182350096BD94 /* Main.storyboard in Resources */,
@@ -183,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7883E1E2861BBA10096BD94 /* TMDBClient.swift in Sources */,
 				D7883DF3286182350096BD94 /* LoginViewController.swift in Sources */,
 				D7883E112861AA590096BD94 /* LoginButton.swift in Sources */,
 				D7883E152861B4AC0096BD94 /* SearchViewController.swift in Sources */,
@@ -220,6 +252,7 @@
 /* Begin XCBuildConfiguration section */
 		D7883DFD286182380096BD94 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7883E202861BC600096BD94 /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -281,6 +314,7 @@
 		};
 		D7883DFE286182380096BD94 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7883E202861BC600096BD94 /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
