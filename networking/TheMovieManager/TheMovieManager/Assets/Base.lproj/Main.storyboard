@@ -88,23 +88,30 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="PcQ-4d-RHE">
+                                <rect key="frame" x="197" y="570.5" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="GradientTop"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ouV-Y5-LAu" secondAttribute="trailing" constant="16" id="5Vz-xQ-rAD"/>
                             <constraint firstItem="v4L-kR-UCL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="H7V-uO-5bC"/>
+                            <constraint firstItem="PcQ-4d-RHE" firstAttribute="top" secondItem="v4L-kR-UCL" secondAttribute="bottom" constant="8" id="QJy-eU-7sg"/>
                             <constraint firstItem="ouV-Y5-LAu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="QvE-w0-D3H"/>
                             <constraint firstItem="5w0-Ti-Pb5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="TTw-aU-eWi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5w0-Ti-Pb5" secondAttribute="trailing" constant="16" id="V5i-da-C8E"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="v4L-kR-UCL" secondAttribute="trailing" constant="16" id="hKe-ag-gq7"/>
+                            <constraint firstItem="PcQ-4d-RHE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nfJ-id-cPj"/>
                             <constraint firstItem="5w0-Ti-Pb5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="pF5-II-tAW"/>
                             <constraint firstItem="v4L-kR-UCL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="pJO-0A-ZXr"/>
                             <constraint firstItem="ouV-Y5-LAu" firstAttribute="top" secondItem="5w0-Ti-Pb5" secondAttribute="bottom" constant="16" id="sDS-rR-5VU"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="PcQ-4d-RHE" id="1jK-pw-tdF"/>
                         <outlet property="emailTextField" destination="BZr-iP-ARn" id="V8h-Rb-BYb"/>
+                        <outlet property="loginButton" destination="Pdl-Jw-fvK" id="f46-Lv-xEK"/>
                         <outlet property="passwordTextField" destination="OFL-EF-F3Q" id="p1c-XM-GSe"/>
                         <segue destination="y2N-Ft-uco" kind="presentation" identifier="completeLogin" id="nJ0-rx-aXc"/>
                     </connections>

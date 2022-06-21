@@ -22,6 +22,8 @@
 		D7883E192861B4C50096BD94 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7883E182861B4C50096BD94 /* FavoritesViewController.swift */; };
 		D7883E1E2861BBA10096BD94 /* TMDBClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7883E1D2861BBA10096BD94 /* TMDBClient.swift */; };
 		D7883E212861BC600096BD94 /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D7883E202861BC600096BD94 /* Secrets.xcconfig */; };
+		D7883E252861CDE90096BD94 /* RequestTokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7883E242861CDE90096BD94 /* RequestTokenResponse.swift */; };
+		D7883E272861D1870096BD94 /* TMDBResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7883E262861D1870096BD94 /* TMDBResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		D7883E182861B4C50096BD94 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		D7883E1D2861BBA10096BD94 /* TMDBClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBClient.swift; sourceTree = "<group>"; };
 		D7883E202861BC600096BD94 /* Secrets.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = SOURCE_ROOT; };
+		D7883E242861CDE90096BD94 /* RequestTokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTokenResponse.swift; sourceTree = "<group>"; };
+		D7883E262861D1870096BD94 /* TMDBResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				D7883E1B2861BB360096BD94 /* Data */,
+				D7883E232861CDB80096BD94 /* Responses */,
 				D7883E1C2861BB7C0096BD94 /* TMDB Client */,
 			);
 			path = Model;
@@ -140,6 +145,15 @@
 				D7883E1D2861BBA10096BD94 /* TMDBClient.swift */,
 			);
 			path = "TMDB Client";
+			sourceTree = "<group>";
+		};
+		D7883E232861CDB80096BD94 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				D7883E242861CDE90096BD94 /* RequestTokenResponse.swift */,
+				D7883E262861D1870096BD94 /* TMDBResponse.swift */,
+			);
+			path = Responses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,8 +236,10 @@
 				D7883E0F2861A41C0096BD94 /* GradientView.swift in Sources */,
 				D7883DEF286182350096BD94 /* AppDelegate.swift in Sources */,
 				D7883E172861B4B80096BD94 /* WatchlistViewController.swift in Sources */,
+				D7883E272861D1870096BD94 /* TMDBResponse.swift in Sources */,
 				D7883DF1286182350096BD94 /* SceneDelegate.swift in Sources */,
 				D7883E192861B4C50096BD94 /* FavoritesViewController.swift in Sources */,
+				D7883E252861CDE90096BD94 /* RequestTokenResponse.swift in Sources */,
 				D7883E132861AD330096BD94 /* LoginTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
