@@ -22,13 +22,9 @@ class ViewController: UIViewController {
             guard let data = data else {
                 return
             }
-            do {
-                let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-                let url = json["message"] as! String
-                self.loadImageURL(URL(string: url)!)
-            } catch {
-                print(error)
-            }
+            let decoder = JSONDecoder()
+            let imageData = try! decoder.decode(DogImage.self, from: data)
+            self.loadImageURL(URL(string: imageData.message)!)
         }
         task.resume()
     }

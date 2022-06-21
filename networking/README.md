@@ -114,5 +114,17 @@ let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String
 let url = json["message"] as! String
 ```
 
-
 Codable: a protocol used to convert data, like JSON, to and from Swift types
+* Encodable: from Swift object to JSON
+* Decodable: from JSON to Swift object
+
+```swift
+struct DogImage: Codable {
+    let status: String
+    let message: String
+}
+
+let decoder = JSONDecoder()
+let imageData = try! decoder.decode(DogImage.self, from: data)
+let url = imageData.message
+```
