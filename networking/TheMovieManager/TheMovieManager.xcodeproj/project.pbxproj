@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		D7883DEF286182350096BD94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7883DEE286182350096BD94 /* AppDelegate.swift */; };
 		D7883DF1286182350096BD94 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7883DF0286182350096BD94 /* SceneDelegate.swift */; };
-		D7883DF3286182350096BD94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7883DF2286182350096BD94 /* ViewController.swift */; };
+		D7883DF3286182350096BD94 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7883DF2286182350096BD94 /* LoginViewController.swift */; };
 		D7883DF6286182350096BD94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7883DF4286182350096BD94 /* Main.storyboard */; };
 		D7883DF8286182380096BD94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7883DF7286182380096BD94 /* Assets.xcassets */; };
 		D7883DFB286182380096BD94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7883DF9286182380096BD94 /* LaunchScreen.storyboard */; };
@@ -17,13 +17,16 @@
 		D7883E0F2861A41C0096BD94 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7883E0E2861A41C0096BD94 /* GradientView.swift */; };
 		D7883E112861AA590096BD94 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7883E102861AA590096BD94 /* LoginButton.swift */; };
 		D7883E132861AD330096BD94 /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7883E122861AD330096BD94 /* LoginTextField.swift */; };
+		D7883E152861B4AC0096BD94 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7883E142861B4AC0096BD94 /* SearchViewController.swift */; };
+		D7883E172861B4B80096BD94 /* WatchlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7883E162861B4B80096BD94 /* WatchlistViewController.swift */; };
+		D7883E192861B4C50096BD94 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7883E182861B4C50096BD94 /* FavoritesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D7883DEB286182350096BD94 /* TheMovieManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheMovieManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7883DEE286182350096BD94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7883DF0286182350096BD94 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D7883DF2286182350096BD94 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D7883DF2286182350096BD94 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D7883DF5286182350096BD94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D7883DF7286182380096BD94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7883DFA286182380096BD94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -32,6 +35,9 @@
 		D7883E0E2861A41C0096BD94 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		D7883E102861AA590096BD94 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		D7883E122861AD330096BD94 /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
+		D7883E142861B4AC0096BD94 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		D7883E162861B4B80096BD94 /* WatchlistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistViewController.swift; sourceTree = "<group>"; };
+		D7883E182861B4C50096BD94 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +93,10 @@
 		D7883E0A2861A3BB0096BD94 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D7883DF2286182350096BD94 /* ViewController.swift */,
+				D7883DF2286182350096BD94 /* LoginViewController.swift */,
+				D7883E142861B4AC0096BD94 /* SearchViewController.swift */,
+				D7883E162861B4B80096BD94 /* WatchlistViewController.swift */,
+				D7883E182861B4C50096BD94 /* FavoritesViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -174,12 +183,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7883DF3286182350096BD94 /* ViewController.swift in Sources */,
+				D7883DF3286182350096BD94 /* LoginViewController.swift in Sources */,
 				D7883E112861AA590096BD94 /* LoginButton.swift in Sources */,
+				D7883E152861B4AC0096BD94 /* SearchViewController.swift in Sources */,
 				D7883E0D2861A4070096BD94 /* Colors.swift in Sources */,
 				D7883E0F2861A41C0096BD94 /* GradientView.swift in Sources */,
 				D7883DEF286182350096BD94 /* AppDelegate.swift in Sources */,
+				D7883E172861B4B80096BD94 /* WatchlistViewController.swift in Sources */,
 				D7883DF1286182350096BD94 /* SceneDelegate.swift in Sources */,
+				D7883E192861B4C50096BD94 /* FavoritesViewController.swift in Sources */,
 				D7883E132861AD330096BD94 /* LoginTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

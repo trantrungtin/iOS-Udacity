@@ -5,13 +5,14 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TheMovieManager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="TheMovieManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="GradientView" customModule="TheMovieManager" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,6 +63,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Login">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bYz-E6-x6p"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kop-RX-Jgw">
                                         <rect key="frame" x="0.0" y="164.5" width="382" height="20.5"/>
@@ -78,6 +82,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Login via Website">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="loginViaWebsiteTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qgv-Ti-Ozp"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -96,16 +103,94 @@
                             <constraint firstItem="ouV-Y5-LAu" firstAttribute="top" secondItem="5w0-Ti-Pb5" secondAttribute="bottom" constant="16" id="sDS-rR-5VU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="BZr-iP-ARn" id="V8h-Rb-BYb"/>
+                        <outlet property="passwordTextField" destination="OFL-EF-F3Q" id="p1c-XM-GSe"/>
+                        <segue destination="y2N-Ft-uco" kind="presentation" identifier="completeLogin" id="nJ0-rx-aXc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="44.927536231884062" y="69.642857142857139"/>
         </scene>
+        <!--Watchlist-->
+        <scene sceneID="5Vy-2W-zcU">
+            <objects>
+                <viewController id="B2q-ni-A3W" customClass="WatchlistViewController" customModule="TheMovieManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JFi-K1-cK2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vFs-je-K1L"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Watchlist" image="List" id="xWL-ML-R6r"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jqa-hW-rmG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2125" y="382"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="bAG-6g-Hip">
+            <objects>
+                <viewController id="jY2-Hm-pMh" customClass="SearchViewController" customModule="TheMovieManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uhR-Sg-UmH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="qlL-Au-OgX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Search" image="Genre" id="9Q6-yd-01o"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cgp-8J-s8Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2126" y="-331"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="AjA-UP-gMx">
+            <objects>
+                <tabBarController id="y2N-Ft-uco" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mGu-1t-YF7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="jY2-Hm-pMh" kind="relationship" relationship="viewControllers" id="lvp-pY-Gxe"/>
+                        <segue destination="B2q-ni-A3W" kind="relationship" relationship="viewControllers" id="f1k-Jd-THH"/>
+                        <segue destination="54B-kd-k5L" kind="relationship" relationship="viewControllers" id="yzH-RI-bWA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Mb-KF-6pO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1092" y="70"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="WbB-c7-4dJ">
+            <objects>
+                <viewController id="54B-kd-k5L" customClass="FavoritesViewController" customModule="TheMovieManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RME-gb-PDs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="dYX-RS-fjs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="Favorite" id="DrE-4f-7OB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LfD-Uv-eAd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2125" y="1126"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Camera" width="64" height="64"/>
+        <image name="Favorite" width="32" height="32"/>
+        <image name="Genre" width="30" height="30"/>
+        <image name="List" width="32" height="32"/>
         <namedColor name="GradientTop">
             <color red="0.3449999988079071" green="0.83899998664855957" blue="0.98799997568130493" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
