@@ -56,15 +56,39 @@
 		D7883DED286182350096BD94 /* TheMovieManager */ = {
 			isa = PBXGroup;
 			children = (
+				D7883DFC286182380096BD94 /* Info.plist */,
 				D7883DEE286182350096BD94 /* AppDelegate.swift */,
 				D7883DF0286182350096BD94 /* SceneDelegate.swift */,
-				D7883DF2286182350096BD94 /* ViewController.swift */,
+				D7883E0B2861A3C50096BD94 /* View */,
+				D7883E0A2861A3BB0096BD94 /* Controller */,
+				D7883E092861A3AC0096BD94 /* Assets */,
+			);
+			path = TheMovieManager;
+			sourceTree = "<group>";
+		};
+		D7883E092861A3AC0096BD94 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
 				D7883DF4286182350096BD94 /* Main.storyboard */,
 				D7883DF7286182380096BD94 /* Assets.xcassets */,
 				D7883DF9286182380096BD94 /* LaunchScreen.storyboard */,
-				D7883DFC286182380096BD94 /* Info.plist */,
 			);
-			path = TheMovieManager;
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		D7883E0A2861A3BB0096BD94 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D7883DF2286182350096BD94 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D7883E0B2861A3C50096BD94 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
