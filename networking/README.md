@@ -229,3 +229,11 @@ struct Student: Codable {
     let academics: Academics
 }
 ```
+
+## API Key
+Unique identifier for requests sent from an app
+
+Benefits:
+* Hosting costs
+* Rate limiting
+* Better service
